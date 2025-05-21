@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Sport-News</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar"></div>
+
+    <div class="seitentitel">
+        <h1>Daily Sport - News</h1>
+    </div>
+
+    <div class="contentfullscreen">
+
+        <div display="flex" style="gap: 10px; flex-wrap: wrap;">
+            <a href="https://www.sport1.de/" target="meinIFrame" class="link-box_news">Sport1</a>
+            <a href="https://www.sportbild.bild.de" target="meinIFrame" class="link-box_news">SportBild</a>
+        </div>
+        <br>
+
+        <iframe height="800px" width="100%" name="meinIFrame" src="https://www.sport1.de"
+            sandbox="allow-forms"></iframe>
+
+        <br>
+
+
+    </div>
+
+    <script src="../sidebarmenu.js" defer></script>
+
+
+</body>
+
+</html>
