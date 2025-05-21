@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopfrechnen - Addition</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/WebApp/css/styles.css">
 </head>
 
 <body>
@@ -54,7 +54,7 @@
 
 </div>
 
-<script src="../sidebarmenu.js" defer></script> 
+<script src="/WebApp/sidebarmenu.js" defer></script> 
 
 
 </body>
