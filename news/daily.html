@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="sidebar" class="sidebar"></div>
+
+    <div class="seitentitel">
+        <h1>Daily News</h1>
+    </div>
+
+    <div class="contentfullscreen">
+
+        <div display="flex" style="gap: 10px; flex-wrap: wrap;">
+            <a href="https://www.goettinger-tagesblatt.de/" target="meinIFrame"
+                class="link-box_news">GöttingerTagesblatt</a>
+            <a href="https://www.bild.de" target="meinIFrame" class="link-box_news">Bild</a>
+            <a href="https://www.n-tv.de/" target="meinIFrame" class="link-box_news">n-tv</a>
+        </div>
+        <br>
+
+        <iframe height="800px" width="100%" name="meinIFrame" src="https://www.bild.de" sandbox="allow-forms"></iframe>
+
+        <br>
+
+    </div>
+
+    <script src="../sidebarmenu.js" defer></script>
+
+</body>
+
+</html>

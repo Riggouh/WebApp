@@ -1,15 +1,23 @@
-body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: linear-gradient(135deg, #4e4e4e44, #3b3f3f);
-    margin: 0;
-    padding: 0;
+  body {
+    background: linear-gradient(135deg,
+        #3c3c3c 0%,
+        #575252 25%,
+        #757070 50%,
+        #a1a0a0 75%,
+        #b9b9b9 100%);
+    background-attachment: fixed;
+    font-family: 'Times New Roman', sans-serif;
+  }
+
+
+  .contentfullscreen {
     color: white;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    text-align: center;
   }
 
   h1 {
@@ -71,7 +79,7 @@ body {
 
   .sidebar a:hover {
     color: #fff;
-    background-color: #444;
+    background-color: transparent;
     transform: scale(1.05);
   }
 
@@ -86,4 +94,39 @@ body {
 
   .sidebar.open {
     width: 250px;
+  }
+
+    .submenu {
+    display: none;
+    padding-left: 15px;
+  }
+
+  .submenu a {
+    display: block;
+    font-size: 0.95em;
+  }
+
+  .seitentitel {
+    text-align: center;
+    margin: 40px 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+  }
+
+    .link-box_news {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease;
+  }
+
+  .link-box_news:hover {
+    background-color: #f5f5f5;
+    border-color: #888;
   }
