@@ -1,0 +1,88 @@
+<section class="contentlearning" id="js">
+    <h2>Ein Hauch von JavaScript</h2>
+    <p>JavaScript bringt Interaktivität auf deine Webseite. Du kannst auf Klicks reagieren, Inhalte dynamisch ändern, Formulare prüfen oder Animationen steuern.</p>
+
+    <details>
+        <summary>Beispiel für JavaScript</summary>
+        <pre><code>document.querySelector("button").addEventListener("click", function() {
+  alert("Hallo Welt!");
+});</code></pre>
+    </details>
+
+    <button class="link-box_news">Klick mich!</button>
+
+    <h3>Wichtige JavaScript-Grundlagen</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Befehl / Objekt</th>
+                <th>Beschreibung</th>
+                <th>Beispiel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>document.querySelector()</td>
+                <td>Wählt das erste Element, das zum CSS-Selektor passt</td>
+                <td>document.querySelector("p")</td>
+            </tr>
+            <tr>
+                <td>addEventListener()</td>
+                <td>Fügt einem Element einen Ereignis-Listener hinzu (z.B. Klick)</td>
+                <td>button.addEventListener("click", callback)</td>
+            </tr>
+            <tr>
+                <td>alert()</td>
+                <td>Zeigt eine Popup-Nachricht</td>
+                <td>alert("Hallo!");</td>
+            </tr>
+            <tr>
+                <td>console.log()</td>
+                <td>Gibt Text oder Werte in der Browser-Konsole aus (für Debugging)</td>
+                <td>console.log("Test");</td>
+            </tr>
+            <tr>
+                <td>let / const</td>
+                <td>Variablen-Deklaration (let änderbar, const konstant)</td>
+                <td>let name = "Max";<br>const pi = 3.14;</td>
+            </tr>
+            <tr>
+                <td>function</td>
+                <td>Definiert eine Funktion</td>
+                <td>function sagHallo() { alert("Hallo!"); }</td>
+            </tr>
+            <tr>
+                <td>if / else</td>
+                <td>Bedingte Anweisungen</td>
+                <td>if (x > 5) { ... } else { ... }</td>
+            </tr>
+            <tr>
+                <td>for</td>
+                <td>Schleife</td>
+                <td>for (let i=0; i&lt;5; i++) { ... }</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Ein erweitertes Beispiel</h3>
+    <details>
+        <summary>Klick-Event mit Textänderung</summary>
+        <pre><code>const button = document.querySelector("button");
+const message = document.createElement("p");
+message.textContent = "Noch kein Klick.";
+document.body.appendChild(message);
+
+button.addEventListener("click", () => {
+  message.textContent = "Du hast auf den Button geklickt!";
+  console.log("Button wurde geklickt.");
+});</code></pre>
+    </details>
+
+    <p>YouTube-Tutorial:</p>
+    <div class="contentiframeslearning">
+        <iframe src="https://www.youtube.com/embed/3co-nU4il5c?si=0Sf0HrGLzo0pPpuq" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>

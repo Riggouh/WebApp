@@ -20,12 +20,41 @@
     height: 100vh;
   }
 
+  .contentlearning {
+    color: white;
+    display: block;
+    text-align: left;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .listlearning {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+
+  .listlearning li:hover {
+    background-color: #2a2a2a;
+  }
+
   .contentiframes {
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
+  }
+
+  .contentiframeslearning {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 560px;
+    height: 315px;
   }
 
   h1 {
@@ -38,31 +67,65 @@
     max-width: 1200px;
   }
 
-  .hamburger {
+
+  .seitentitel {
+    text-align: center;
+    margin: 40px 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+  }
+
+  .link-box_news {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+  }
+
+  .link-box_news:hover {
+    border-color: #888;
+    text-decoration: underline;
+  }
+
+  iframe {
+    border: none;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Tab Navigation Programmieren lernen*/
+  .tab-navigation {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 20px;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .tab-navigation button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1em;
+    padding: 8px 16px;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    transition: background 0.3s;
   }
 
-  .hamburger div {
-    width: 30px;
-    height: 5px;
-    background-color: #fff;
-    transition: 0.4s;
+  .tab-navigation button:hover,
+  .tab-navigation button.active {
+    background: white;
+    color: black;
   }
 
-  .hamburger.open {
-    visibility: hidden;
-  }
-
+  /*Sidebar*/
   .sidebar {
     height: 100%;
     width: 0;
@@ -104,7 +167,7 @@
     width: 250px;
   }
 
-    .submenu {
+  .submenu {
     display: none;
     padding-left: 15px;
   }
@@ -114,34 +177,28 @@
     font-size: 0.95em;
   }
 
-  .seitentitel {
-    text-align: center;
-    margin: 40px 0;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
+  /* Hamburger Menu */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
   }
 
-    .link-box_news {
-    padding: 8px 12px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    text-decoration: none;
-    color: white;
-    transition: all 0.2s ease;
+  .hamburger div {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    transition: 0.4s;
   }
 
-  .link-box_news:hover {
-    border-color: #888;
-    text-decoration: underline;
-  }
-
-  iframe {
-    border: none;
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
+  .hamburger.open {
+    visibility: hidden;
   }
