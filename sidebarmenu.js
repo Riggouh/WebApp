@@ -22,7 +22,7 @@ function toggleSubmenuChilllounge() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/WebApp/sidebarcontent.html")
+    fetch("/../sidebarcontent.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("sidebar").innerHTML = data;
