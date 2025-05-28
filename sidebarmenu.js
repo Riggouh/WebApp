@@ -19,5 +19,13 @@ function toggleSubmenuMath() {
 
 function toggleSubmenuChilllounge() {
     const submenu = document.getElementById("submenuChilllounge");
-    if (submenu) submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("/WebApp/sidebarcontent.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("sidebar").innerHTML = data;
+        });
+});
