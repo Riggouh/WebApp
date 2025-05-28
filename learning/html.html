@@ -1,0 +1,105 @@
+<section class="contentlearning" id="html">
+    <h2>HTML Grundlagen</h2>
+    <p>HTML (HyperText Markup Language) ist die Struktur deiner Webseite. Du baust damit Überschriften, Absätze,
+        Listen, Bilder, Links und vieles mehr.</p>
+
+    <details> <!-- Details für Spoiler -->
+        <summary>Beispiel für HTML</summary>
+        <pre><code>&lt;h1&gt;Hallo Welt&lt;/h1&gt;
+&lt;p&gt;Das ist ein Absatz.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Listelement 1&lt;/li&gt;
+  &lt;li&gt;Listelement 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="https://example.com"&gt;Link zu Example.com&lt;/a&gt;</code></pre>
+    </details>
+
+    <h3>Wichtige HTML-Tags auf einen Blick</h3>
+    <table border="1" cellpadding="5" cellspacing="0"> <!-- Cellpadding und Cellspacing für die Ausrichtung des Inhalts einer Zelle -->
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Beschreibung</th>
+                <th>Beispiel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;h1&gt; – &lt;h6&gt;</td>
+                <td>Überschriften in verschiedenen Größen</td>
+                <td>&lt;h2&gt;Meine Überschrift&lt;/h2&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>Absatz</td>
+                <td>&lt;p&gt;Dies ist ein Absatz.&lt;/p&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;a&gt;</td>
+                <td>Hyperlink zu einer anderen Seite oder Ressource</td>
+                <td>&lt;a href="https://google.de"&gt;Google&lt;/a&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;img&gt;</td>
+                <td>Bild einfügen (benötigt src-Attribut)</td>
+                <td>&lt;img src="bild.jpg" alt="Beschreibung"&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;ul&gt; / &lt;ol&gt;</td>
+                <td>Ungeordnete (Punkte) und geordnete (Nummerierte) Listen</td>
+                <td>
+                    &lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;/ul&gt;<br>
+                    &lt;ol&gt;&lt;li&gt;Erster&lt;/li&gt;&lt;/ol&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td>Container für andere Elemente, um sie zu gruppieren</td>
+                <td>&lt;div class="container"&gt;Inhalt&lt;/div&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;span&gt;</td>
+                <td>Inline-Container für Text oder kleine Elemente</td>
+                <td>&lt;span style="color:red;"&gt;Rot gefärbter Text&lt;/span&gt;</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Weitere wichtige HTML Konzepte</h3>
+    <ul class="listlearning">
+        <li><strong>Attribute:</strong> Zusätzliche Informationen zu einem Tag, z.B. <code>href</code> bei Links oder <code>src</code> bei Bildern.</li>
+        <li><strong>Verschachtelung:</strong> HTML-Elemente können ineinander verschachtelt werden, z.B. eine Liste innerhalb eines Absatzes.</li>
+        <li><strong>Semantik:</strong> HTML-Tags haben eine Bedeutung, z.B. <code>&lt;header&gt;</code> für den Kopfbereich, <code>&lt;footer&gt;</code> für den Fußbereich.</li>
+    </ul>
+
+    <p>Hier noch ein erweitertes Beispiel mit mehreren Elementen:</p>
+    <details>
+        <summary>Komplexeres Beispiel</summary>
+        <pre><code>&lt;header&gt;
+  &lt;h1&gt;Meine Webseite&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#home"&gt;Start&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;Über uns&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contact"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;section id="home"&gt;
+  &lt;h2&gt;Willkommen!&lt;/h2&gt;
+  &lt;p&gt;Das ist eine Beispielwebseite.&lt;/p&gt;
+  &lt;img src="beispielbild.jpg" alt="Beispielbild"&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2025 Meine Webseite&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </details>
+
+    <p>YouTube-Tutorial:</p>
+    <div class="contentiframeslearning">
+        <iframe src="https://www.youtube.com/embed/Q3MIitoSQkE?si=N-b-JCJkIENgfWMc" title="HTML Grundlagen Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>

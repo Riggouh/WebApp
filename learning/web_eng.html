@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML, CSS & JavaScript Lernen</title>
+    <link rel="stylesheet" href="/../css/styles.css">
+    <script src="/../sidebarmenu.js" defer></script>
+    <script src="/../learning/web_eng.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+    </div>
+
+    <h1 class="seitentitel">HTML, CSS & JavaScript Lernen</h1>
+
+    <!-- Tab-Bar Top -->
+    <div class="tab-navigation">
+        <button onclick="switchTab('html')" class="active">HTML</button>
+        <button onclick="switchTab('css')">CSS</button>
+        <button onclick="switchTab('js')">JavaScript</button>
+    </div>
+
+    <!-- Sections zur Auswahl -->
+<section id="html" class="contentlearning"></section>
+<section id="css" class="contentlearning" style="display:none"></section>
+<section id="js" class="contentlearning" style="display:none"></section>
+
+
+</body>
+
+</html>

@@ -11,6 +11,12 @@ function toggleSubmenuNews() {
     submenu.style.display = submenu.style.display === "block" ? "none" : "block";
 }
 
+function toggleSubmenuProgramming() {
+    const submenu = document.getElementById("submenuProgramming");
+    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
+
+
 function toggleSubmenuMath() {
     const submenu = document.getElementById("submenuMath");
     submenu.style.display = submenu.style.display === "block" ? "none" : "block";

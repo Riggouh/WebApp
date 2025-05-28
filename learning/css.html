@@ -1,0 +1,150 @@
+<section class="contentlearning" id="css">
+    <h2>CSS Grundlagen</h2>
+    <p>CSS (Cascading Style Sheets) verleiht deiner Webseite Stil. Du kannst Farben, Layouts, Schriftarten, Abstände und vieles mehr definieren. <br>Oft als eigenständige Datei ("style.css").</p>
+
+    <details>
+        <summary>Beispiel für CSS</summary>
+        <pre><code>body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}</code></pre>
+    </details>
+
+    <h3>Wichtige CSS-Eigenschaften</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Eigenschaft</th>
+                <th>Beschreibung</th>
+                <th>Beispiel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>color</td>
+                <td>Textfarbe</td>
+                <td>color: red;</td>
+            </tr>
+            <tr>
+                <td>background-color</td>
+                <td>Hintergrundfarbe</td>
+                <td>background-color: #00ff00;</td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>Schriftgröße</td>
+                <td>font-size: 16px;</td>
+            </tr>
+            <tr>
+                <td>margin</td>
+                <td>Außenabstand (Abstand zum Nachbar)</td>
+                <td>margin: 10px;</td>
+            </tr>
+            <tr>
+                <td>padding</td>
+                <td>Innenabstand (Abstand zum Inhalt)</td>
+                <td>padding: 5px;</td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>Rahmen</td>
+                <td>border: 1px solid black;</td>
+            </tr>
+            <tr>
+                <td>width / height</td>
+                <td>Breite und Höhe eines Elements</td>
+                <td>width: 100px;<br>height: 50px;</td>
+            </tr>
+            <tr>
+                <td>display</td>
+                <td>Bestimmt, wie ein Element dargestellt wird (z.B. block, inline, flex)</td>
+                <td>display: flex;</td>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>Textausrichtung</td>
+                <td>text-align: center;</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>CSS Selektoren</h3>
+    <p>CSS benutzt <em>Selektoren</em>, um Elemente auszuwählen, die gestylt werden sollen.</p>
+    <ul>
+        <li><code>element</code> (z.B. <code>p</code>) – alle Elemente dieses Typs</li>
+        <li><code>.class</code> – alle Elemente mit der Klasse</li>
+        <li><code>#id</code> – das Element mit der ID</li>
+        <li><code>element.class</code> – Elemente eines Typs mit einer bestimmten Klasse</li>
+    </ul>
+
+    <p>Beispiele:</p>
+    <pre><code>p {
+  color: blue;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+#header {
+  font-weight: bold;
+}</code></pre>
+
+    <h3>Erweitertes Beispiel</h3>
+    <details>
+        <summary>Komplexeres CSS Beispiel</summary>
+        <pre><code>body {
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #222;
+}
+
+h2 {
+  color: #005f73;
+  text-align: center;
+}
+
+.contentfullscreen {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #e0fbfc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contentiframeslearning iframe {
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #94d2bd;
+  color: #003d33;
+}</code></pre>
+    </details>
+
+    <p>YouTube-Tutorial:</p>
+    <div class="contentiframeslearning">
+        <iframe src="https://www.youtube.com/embed/I84aQhbJl_Y?si=JuGyPl_gDtnFgl6T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>
