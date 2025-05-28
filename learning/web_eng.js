@@ -11,7 +11,7 @@ function switchTab(tabId) {
   sections.forEach(id => {
     const section = document.getElementById(id);
     if (id === tabId) {
-      fetch(`/PCWebApp/learning/${id}.html`)
+      fetch(`/../learning/${id}.html`)
         .then(response => response.text())
         .then(data => {
           section.innerHTML = data;
