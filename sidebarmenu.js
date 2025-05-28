@@ -8,23 +8,16 @@ function toggleMenu() {
 
 function toggleSubmenuNews() {
     const submenu = document.getElementById("submenuNews");
-    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    // Nur umschalten, wenn das Element existiert (wichtig, wenn Login-Formular angezeigt wird)
+    if (submenu) submenu.style.display = submenu.style.display === "block" ? "none" : "block";
 }
 
 function toggleSubmenuMath() {
     const submenu = document.getElementById("submenuMath");
-    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    if (submenu) submenu.style.display = submenu.style.display === "block" ? "none" : "block";
 }
 
 function toggleSubmenuChilllounge() {
     const submenu = document.getElementById("submenuChilllounge");
-    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    if (submenu) submenu.style.display = submenu.style.display === "block" ? "none" : "block";
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("sidebarcontent.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("sidebar").innerHTML = data;
-    });
-});
