@@ -29,11 +29,6 @@ function toggleSubmenuChilllounge() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    fetch("/../sidebarcontent.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("sidebar").innerHTML = data;
-    });
-
+    // Content fetching removed from here.
+    // authentication.js will handle loading the correct sidebar content.
 });

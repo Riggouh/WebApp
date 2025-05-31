@@ -1,13 +1,13 @@
-// ...existing code...
+// filepath: c:\Users\raban\Documents\Uni\Semester2\WebEngineering-Kauan\WebApp\authentication.js
 function isLoggedIn() {
     return !!localStorage.getItem('username');
 }
 
 // Zeigt das Login- und Registrierungs-Formular in der Sidebar an
 function showLoginInSidebar() {
-    fetch('user-auth/index.html')
+    fetch('/user-auth/index.html') // Changed to absolute path
         .then(res => {
-            if (!res.ok) throw new Error(`Failed to fetch user-auth/index.html: ${res.status}`);
+            if (!res.ok) throw new Error(`Failed to fetch /user-auth/index.html: ${res.status}`);
             return res.text();
         })
         .then(html => {
@@ -21,10 +21,10 @@ function showLoginInSidebar() {
 
             const registerFormNode = temp.querySelector('#registerForm');
             const loginFormNode = temp.querySelector('#loginForm');
-            const messageNode = temp.querySelector('#message'); // Das #message div aus user-auth/index.html
+            const messageNode = temp.querySelector('#message'); 
             const h2Nodes = temp.querySelectorAll('h2');
-            const registerHeadingNode = h2Nodes[0]; // Annahme: "Registrieren" ist die erste H2
-            const loginHeadingNode = h2Nodes[1];    // Annahme: "Login" ist die zweite H2
+            const registerHeadingNode = h2Nodes[0]; 
+            const loginHeadingNode = h2Nodes[1];    
 
             if (registerFormNode && loginFormNode && messageNode && registerHeadingNode && loginHeadingNode) {
                 sidebar.innerHTML = `
@@ -35,15 +35,13 @@ function showLoginInSidebar() {
                     ${messageNode.outerHTML}
                 `;
 
-                // Entferne ggf. ein bereits geladenes user-auth/script.js, um Duplikate zu vermeiden
-                const existingScript = document.querySelector('script[src="user-auth/script.js"]');
+                const existingScript = document.querySelector('script[src="/user-auth/script.js"]'); // Check for absolute path
                 if (existingScript) {
                     existingScript.remove();
                 }
-                // Lade user-auth/script.js dynamisch, damit es für die eben eingefügten Formulare funktioniert
                 const script = document.createElement('script');
-                script.src = 'user-auth/script.js'; // Pfad relativ zur Haupt-HTML-Datei (index.html)
-                document.body.appendChild(script); // An den Body anhängen, um Ausführung sicherzustellen
+                script.src = '/user-auth/script.js'; // Changed to absolute path
+                document.body.appendChild(script); 
 
             } else {
                 sidebar.innerHTML = '<p>Login/Registrierungs-Formular konnte nicht geladen werden.</p>';
@@ -75,13 +73,13 @@ function showUsernameTopRight(username) {
     }
     userDiv.innerText = `Angemeldet als: ${username}`;
 }
-window.showUsernameTopRight = showUsernameTopRight; // Global verfügbar machen
+window.showUsernameTopRight = showUsernameTopRight; 
 
 // Lädt den Sidebar-Content
 function showSidebarContent() {
-    fetch('sidebarcontent.html')
+    fetch('/sidebarcontent.html') // Changed to absolute path
         .then(res => {
-            if (!res.ok) throw new Error(`Failed to fetch sidebarcontent.html: ${res.status}`);
+            if (!res.ok) throw new Error(`Failed to fetch /sidebarcontent.html: ${res.status}`);
             return res.text();
         })
         .then(html => {
@@ -100,7 +98,7 @@ function showSidebarContent() {
             }
         });
 }
-window.showSidebarContent = showSidebarContent; // Global verfügbar machen
+window.showSidebarContent = showSidebarContent; 
 
 // Initialisierung beim Laden der Seite
 document.addEventListener('DOMContentLoaded', function () {
@@ -135,6 +133,5 @@ window.logout = function () {
     if (userDiv) {
         userDiv.remove();
     }
-    showLoginInSidebar(); // Zeigt wieder Login/Registrierung an
+    showLoginInSidebar(); 
 };
-// ...existing code...
