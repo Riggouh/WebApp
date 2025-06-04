@@ -1,3 +1,12 @@
+<--Script zum erstellen der Datenbank-->
+
+
+
+
+
+
+
+<--Erstellen der Tabelle innerhalb einer Datenbank-->
 CREATE TABLE users(
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,

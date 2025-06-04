@@ -202,3 +202,33 @@
   .hamburger.open {
     visibility: hidden;
   }
+
+  .logout-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 6px 10px;
+    border: 1px solid #f44336;
+    background-color: transparent;
+    color: #f44336;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .logout-btn:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+
+  .logout-btn:hover {
+    background-color: #d32f2f;
+  }
+
+  .menu-separator {
+    margin: 20px 0 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+  }

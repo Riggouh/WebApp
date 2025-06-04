@@ -1,44 +1,44 @@
 <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">x</a>
-<a href="../main/index.html">Home</a>
+<div>
+  <a href="../main/index.html">Home</a>
 
-<div class="dropdown">
-  <a href="javascript:void(0)" onclick="toggleSubmenuNews()">News ▾</a>
-  <div id="submenuNews" class="submenu">
-    <a href="../news/daily.html">Allgemein</a>
-    <a href="../news/sport.html">Sport</a>
-    <a href="../news/finance.html">Finanzen</a>
+  <div class="dropdown">
+    <a href="javascript:void(0)" onclick="toggleSubmenuNews()">News ▾</a>
+    <div id="submenuNews" class="submenu">
+      <a href="../news/daily.html">Allgemein</a>
+      <a href="../news/sport.html">Sport</a>
+      <a href="../news/finance.html">Finanzen</a>
+    </div>
   </div>
-
   <div class="dropdown">
     <a href="javascript:void(0)" onclick="toggleSubmenuProgramming()">Programmieren lernen ▾</a>
     <div id="submenuProgramming" class="submenu">
       <a href="../learning/web_eng.html">HTML/CSS/JS</a>
-      <a href="Site2.html">evtl. 2. Sprache</a>
+      <a href="Site2.html">Coming Soon</a>
     </div>
+  </div>
 
-    <!-- Hauptkategorie mit Unterpunkten -->
-    <div class="dropdown">
-      <a href="javascript:void(0)" onclick="toggleSubmenuMath()">Kopfrechnen ▾</a>
-      <div id="submenuMath" class="submenu">
-        <a href="../math/addition.php">Addition</a>
-        <a href="../math/subtraction.php">Subtraktion</a>
-        <a href="../math/multiplication.php">Multiplikation</a>
-        <a href="../math/division.php">Division</a>
-      </div>
+  <!-- Hauptkategorie mit Unterpunkten -->
+  <div class="dropdown">
+    <a href="javascript:void(0)" onclick="toggleSubmenuMath()">Kopfrechnen ▾</a>
+    <div id="submenuMath" class="submenu">
+      <a href="../math/addition.php">Addition</a>
+      <a href="../math/subtraction.php">Subtraktion</a>
+      <a href="../math/multiplication.php">Multiplikation</a>
+      <a href="../math/division.php">Division</a>
     </div>
-
-    <a href="Site4.html">Quiz</a>
-
-    <div class="dropdown">
-      <a href="javascript:void(0)" onclick="toggleSubmenuChilllounge()">Chill-Lounge ▾</a>
-      <div id="submenuChilllounge" class="submenu">
-        <a href="../chilllounge/flipper/main.html">Flipper (nur Desktop)</a>
-        <a href="spiel2.html">Spiel 2</a>
-      </div>
+  </div>
 
 
-      <a href="Site6.html">Gästebuch</a>
-      <a href="Site7.html">Kontakt</a>
+  <div class="dropdown">
+    <a href="javascript:void(0)" onclick="toggleSubmenuChilllounge()">Chill-Lounge ▾</a>
+    <div id="submenuChilllounge" class="submenu">
+      <a href="../chilllounge/flipper/main.html">Flipper (nur Desktop)</a>
+      <a href="spiel2.html">Coming Soon</a>
+    </div>
+  </div>
+  <a href="Site5.html">Gästebuch</a>
+</div>
 
-
-      <a href="javascript:logout()">Logout</a>
+<hr class="menu-separator">
+<a href="javascript:logout()" class="logout-btn">Logout</a>
