@@ -2,7 +2,7 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     e.preventDefault();
     const formData = new FormData(this);
 
-    fetch('register.php', { // Pfad ist relativ zu user-auth/ (wo script.js und register.php liegen)
+    fetch('/user-auth/register.php', {
         method: 'POST',
         body: formData
     }).then(res => {
@@ -27,14 +27,14 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     const formData = new FormData(this);
     const username = formData.get('username');
 
-    fetch('login.php', { // Pfad ist relativ zu user-auth/
+    fetch('/user-auth/login.php', {
         method: 'POST',
         body: formData
     })
         .then(res => {
             if (!res.ok) {
                 return res.text().then(text => {
-                    // Spezifische Fehlermeldung für 405
+                    // specific error 405
                     if (res.status === 405) {
                         throw new Error(`Methode nicht erlaubt (405). Bitte Serverkonfiguration für PHP POST-Requests prüfen.`);
                     }
@@ -44,7 +44,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
             return res.text();
         })
         .then(data => {
-            const messageDiv = document.getElementById('message'); // Das #message Div aus user-auth/index.html
+            const messageDiv = document.getElementById('message');
             if (data.includes('Erfolg') || data.toLowerCase().includes('erfolgreich')) {
                 localStorage.setItem('username', username);
                 if (window.showUsernameTopRight) {
@@ -53,7 +53,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
                 if (window.showSidebarContent) {
                     window.showSidebarContent();
                 }
-                // Die Sidebar wird neu geladen, eine Erfolgsmeldung hier ist nicht mehr nötig oder sichtbar.
+
             } else {
                 if (messageDiv) {
                     messageDiv.innerText = data || "Login fehlgeschlagen.";

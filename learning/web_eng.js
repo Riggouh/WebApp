@@ -2,12 +2,10 @@ function switchTab(tabId) {
   const sections = ['html', 'css', 'js'];
   const buttons = document.querySelectorAll(".tab-navigation button");
 
-  // Toggle Button Active Style
   buttons.forEach(button => {
     button.classList.toggle("active", button.textContent.toLowerCase() === tabId);
   });
 
-  // Inhalte auslagern und laden
   sections.forEach(id => {
     const section = document.getElementById(id);
     if (id === tabId) {
@@ -16,7 +14,7 @@ function switchTab(tabId) {
         .then(data => {
           section.innerHTML = data;
           section.style.display = "flex";
-          if (id === "js") setupJS(); // zusätzliche Funktion für interaktive Buttons
+          if (id === "js") setupJS();
         });
     } else {
       section.style.display = "none";
@@ -24,7 +22,6 @@ function switchTab(tabId) {
   });
 }
 
-// Nur bei JavaScript-Tab: Button-Event setzen
 function setupJS() {
   const jsButton = document.querySelector("#js .link-box_news");
   if (jsButton) {
@@ -34,7 +31,6 @@ function setupJS() {
   }
 }
 
-// Initialer Tab
 document.addEventListener("DOMContentLoaded", () => {
   switchTab('html');
 });

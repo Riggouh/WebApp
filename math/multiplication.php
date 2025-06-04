@@ -54,7 +54,7 @@
 </div>
 
 <script src="/../sidebarmenu.js" defer></script>
-
+<script src="/../authentication.js" defer></script>
 </body>
 
 </html>

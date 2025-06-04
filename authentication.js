@@ -1,11 +1,9 @@
-// filepath: c:\Users\raban\Documents\Uni\Semester2\WebEngineering-Kauan\WebApp\authentication.js
 function isLoggedIn() {
     return !!localStorage.getItem('username');
 }
 
-// Zeigt das Login- und Registrierungs-Formular in der Sidebar an
 function showLoginInSidebar() {
-    fetch('/user-auth/index.html') // Changed to absolute path
+    fetch('/user-auth/index.html')
         .then(res => {
             if (!res.ok) throw new Error(`Failed to fetch /user-auth/index.html: ${res.status}`);
             return res.text();
@@ -21,10 +19,10 @@ function showLoginInSidebar() {
 
             const registerFormNode = temp.querySelector('#registerForm');
             const loginFormNode = temp.querySelector('#loginForm');
-            const messageNode = temp.querySelector('#message'); 
+            const messageNode = temp.querySelector('#message');
             const h2Nodes = temp.querySelectorAll('h2');
-            const registerHeadingNode = h2Nodes[0]; 
-            const loginHeadingNode = h2Nodes[1];    
+            const registerHeadingNode = h2Nodes[0];
+            const loginHeadingNode = h2Nodes[1];
 
             if (registerFormNode && loginFormNode && messageNode && registerHeadingNode && loginHeadingNode) {
                 sidebar.innerHTML = `
@@ -35,13 +33,13 @@ function showLoginInSidebar() {
                     ${messageNode.outerHTML}
                 `;
 
-                const existingScript = document.querySelector('script[src="/user-auth/script.js"]'); // Check for absolute path
+                const existingScript = document.querySelector('script[src="/user-auth/script.js"]');
                 if (existingScript) {
                     existingScript.remove();
                 }
                 const script = document.createElement('script');
-                script.src = '/user-auth/script.js'; // Changed to absolute path
-                document.body.appendChild(script); 
+                script.src = '/user-auth/script.js';
+                document.body.appendChild(script);
 
             } else {
                 sidebar.innerHTML = '<p>Login/Registrierungs-Formular konnte nicht geladen werden.</p>';
@@ -57,7 +55,7 @@ function showLoginInSidebar() {
         });
 }
 
-// Zeigt den Benutzernamen rechts oben an
+// Show Username
 function showUsernameTopRight(username) {
     let userDiv = document.getElementById('userTopRight');
     if (!userDiv) {
@@ -73,11 +71,11 @@ function showUsernameTopRight(username) {
     }
     userDiv.innerText = `Angemeldet als: ${username}`;
 }
-window.showUsernameTopRight = showUsernameTopRight; 
+window.showUsernameTopRight = showUsernameTopRight;
 
-// Lädt den Sidebar-Content
+// load sidebar-content
 function showSidebarContent() {
-    fetch('/sidebarcontent.html') // Changed to absolute path
+    fetch('/sidebarcontent.html')
         .then(res => {
             if (!res.ok) throw new Error(`Failed to fetch /sidebarcontent.html: ${res.status}`);
             return res.text();
@@ -98,9 +96,9 @@ function showSidebarContent() {
             }
         });
 }
-window.showSidebarContent = showSidebarContent; 
+window.showSidebarContent = showSidebarContent;
 
-// Initialisierung beim Laden der Seite
+//initialisation
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
     if (!sidebar) {
@@ -119,19 +117,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Event-Delegation für Login-Formular WIRD ENTFERNT, da user-auth/script.js dies übernimmt
-/*
-document.addEventListener('submit', function (e) {
-    // ... alter Code hier ...
-});
-*/
-
-// Optional: Logout-Funktion
 window.logout = function () {
     localStorage.removeItem('username');
     const userDiv = document.getElementById('userTopRight');
     if (userDiv) {
         userDiv.remove();
     }
-    showLoginInSidebar(); 
+    showLoginInSidebar();
 };
