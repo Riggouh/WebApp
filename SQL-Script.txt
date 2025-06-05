@@ -8,3 +8,21 @@ CREATE TABLE `users` (
     `username` VARCHAR(50) NOT NULL UNIQUE,
     `password` VARCHAR(255) NOT NULL
 );
+
+-- Guestbook Entries Table
+CREATE TABLE `guestbook_entries` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(100) NOT NULL,
+    `entry_text` TEXT NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Guestbook Replies Table
+CREATE TABLE `guestbook_replies` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `parent_entry_id` INT NOT NULL,
+    `name` VARCHAR(100) NOT NULL,
+    `reply_text` TEXT NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`parent_entry_id`) REFERENCES `guestbook_entries`(`id`) ON DELETE CASCADE
+);
