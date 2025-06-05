@@ -1,0 +1,4 @@
+DirectoryIndex main/index.html
+
+RewriteEngine On
+RewriteRule ^/?$ /main/index.html [L]
