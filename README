@@ -10,4 +10,6 @@ $pass = '';
 
 Open MyPhPAdmin and run the code in SQL-Script.txt
 
+The .htacces File is not required and can be removed.
+
 Now your Database is set up and the Project-set-up is completed.
