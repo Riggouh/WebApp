@@ -55,7 +55,6 @@ function showLoginInSidebar() {
         });
 }
 
-// Show Username
 function showUsernameTopRight(username) {
     let userDiv = document.getElementById('userTopRight');
     if (!userDiv) {
@@ -98,7 +97,7 @@ function showSidebarContent() {
 }
 window.showSidebarContent = showSidebarContent;
 
-//initialisation
+
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
     if (!sidebar) {
