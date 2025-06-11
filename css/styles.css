@@ -205,7 +205,7 @@
     visibility: hidden;
   }
 
-  .logout-btn {Add commentMore actions
+  .logout-btn {
   display: block;
   margin-top: 20px;
   padding: 6px 10px;
@@ -400,7 +400,7 @@
 }
 
 .contentfullscreen {
-  height: auto;Add commentMore actions
+  height: auto;
   min-height: 100vh;
   padding-top: 80px;
   padding-bottom: 40px;
