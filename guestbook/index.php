@@ -13,7 +13,7 @@ $entries = $stmtEntries->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guestbook</title>
+    <title>Gästebuch</title>
     <link rel="stylesheet" href="/css/styles.css"> 
     
 </head>
@@ -26,7 +26,7 @@ $entries = $stmtEntries->fetchAll();
     </div>
     <div id="sidebar" class="sidebar"></div>
 
-    <div class="seitentitel"><h1>Guestbook</h1></div>
+    <div class="seitentitel"><h1>Gästebuch</h1></div>
 
     <div class="guestbook-container contentfullscreen">
 
