@@ -26,11 +26,13 @@ function showLoginInSidebar() {
 
             if (registerFormNode && loginFormNode && messageNode && registerHeadingNode && loginHeadingNode) {
                 sidebar.innerHTML = `
-                    ${registerHeadingNode.outerHTML}
-                    ${registerFormNode.outerHTML}
-                    ${loginHeadingNode.outerHTML}
-                    ${loginFormNode.outerHTML}
-                    ${messageNode.outerHTML}
+                    <div class="auth-forms-container">
+                        ${registerHeadingNode.outerHTML}
+                        ${registerFormNode.outerHTML}
+                        ${loginHeadingNode.outerHTML}
+                        ${loginFormNode.outerHTML}
+                        ${messageNode.outerHTML}
+                    </div>
                 `;
 
                 const existingScript = document.querySelector('script[src="/user-auth/script.js"]');

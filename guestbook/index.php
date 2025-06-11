@@ -28,7 +28,7 @@ $entries = $stmtEntries->fetchAll();
 
     <div class="seitentitel"><h1>Gästebuch</h1></div>
 
-    <div class="guestbook-container contentfullscreen">
+    <div class="guestbook-container contentfullscreen_guestbook">
 
         <div class="guestbook-form-section">
             <h2>Neuen Beitrag verfassen</h2>
