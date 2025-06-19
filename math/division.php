@@ -20,7 +20,7 @@
 
 <div class="seitentitel"><h1>Kopfrechnen - Division</h1></div>
 
-<div class="contentfullscreen">
+<div class="contentfullscreen_math">
     <?php
     // Erzeuge zwei Zahlen so, dass die Division ein ganzzahliges Ergebnis hat
     $divisor = rand(1, 20);

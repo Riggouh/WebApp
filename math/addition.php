@@ -20,7 +20,7 @@
 
 <div class="seitentitel"><h1>Kopfrechnen - Addition</h1></div>
 
-<div class = "contentfullscreen">
+<div class = "contentfullscreen_math">
     <?php
     $zahl1 = rand(1, 100);
     $zahl2 = rand(1, 100);

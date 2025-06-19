@@ -20,7 +20,7 @@
 
 <div class="seitentitel"><h1>Kopfrechnen - Subtraktion</h1></div>
 
-<div class="contentfullscreen">
+<div class="contentfullscreen_math">
     <?php
     // Stelle sicher, dass die größere Zahl zuerst kommt, damit keine negativen Ergebnisse entstehen
     $zahl1 = rand(1, 100);
