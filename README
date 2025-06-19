@@ -1,14 +1,6 @@
 To set up the Project start Apache Service and MySQL with XAMPP.
 
-Go to user-auth/db.php and replace:
-$user = 'users_admin';
-$pass = 'R7otZjq9o#gP1jg*';
-
-with:
-$user = 'root';
-$pass = '';
-
-Open MyPhPAdmin and run the code in SQL-Script.txt
+Open MyPhPAdmin , create Database users_db and run the code in SQL-Script.txt
 
 The .htacces File is not required and can be removed.
 
