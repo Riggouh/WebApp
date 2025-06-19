@@ -59,7 +59,6 @@
         }
 
         function updateBall() {
-            if (highscore >= 15) ball.speedMultiplier -= 0.04;
             ball.dy += gravity;
             ball.x += ball.dx;
             ball.y += ball.dy;
@@ -78,6 +77,7 @@
             );
 
             if (isOnPaddle) {
+                if (highscore == 15) ball.speedMultiplier -= 0.04;
                 if (!ballOnPaddle) {
                     // Neuer Treffer!
                     score++;

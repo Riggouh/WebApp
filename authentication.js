@@ -26,6 +26,7 @@ function showLoginInSidebar() {
 
             if (registerFormNode && loginFormNode && messageNode && registerHeadingNode && loginHeadingNode) {
                 sidebar.innerHTML = `
+                    <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">x</a>
                     <div class="auth-forms-container">
                         ${registerHeadingNode.outerHTML}
                         ${registerFormNode.outerHTML}
