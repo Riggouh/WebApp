@@ -3,7 +3,7 @@ function isLoggedIn() {
 }
 
 function showLoginInSidebar() {
-    fetch('/user-auth/index.html')
+    fetch('../user-auth/index.html')
         .then(res => {
             if (!res.ok) throw new Error(`Failed to fetch /user-auth/index.html: ${res.status}`);
             return res.text();
@@ -41,7 +41,7 @@ function showLoginInSidebar() {
                     existingScript.remove();
                 }
                 const script = document.createElement('script');
-                script.src = '/user-auth/script.js';
+                script.src = '../user-auth/script.js';
                 document.body.appendChild(script);
 
             } else {
@@ -77,7 +77,7 @@ window.showUsernameTopRight = showUsernameTopRight;
 
 // load sidebar-content
 function showSidebarContent() {
-    fetch('/sidebarcontent.html')
+    fetch('../sidebarcontent.html')
         .then(res => {
             if (!res.ok) throw new Error(`Failed to fetch /sidebarcontent.html: ${res.status}`);
             return res.text();

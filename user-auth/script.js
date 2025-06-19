@@ -2,7 +2,7 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     e.preventDefault();
     const formData = new FormData(this);
 
-    fetch('/user-auth/register.php', {
+    fetch('../user-auth/register.php', {
         method: 'POST',
         body: formData
     }).then(res => {
@@ -27,7 +27,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     const formData = new FormData(this);
     const username = formData.get('username');
 
-    fetch('/user-auth/login.php', {
+    fetch('../user-auth/login.php', {
         method: 'POST',
         body: formData
     })

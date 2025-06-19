@@ -14,7 +14,7 @@ $entries = $stmtEntries->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gästebuch</title>
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="../css/styles.css"> 
     
 </head>
 <body>
@@ -100,8 +100,8 @@ $entries = $stmtEntries->fetchAll();
         </div>
     </div>
 
-    <script src="/sidebarmenu.js" defer></script> 
-    <script src="/authentication.js" defer></script> 
+    <script src="../sidebarmenu.js" defer></script> 
+    <script src="../authentication.js" defer></script> 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const loggedInUsername = localStorage.getItem('username');

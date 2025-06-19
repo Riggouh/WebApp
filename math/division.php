@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopfrechnen - Division</title>
-    <link rel="stylesheet" href="/../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
@@ -55,8 +55,8 @@
     </form>
 </div>
 
-<script src="/../sidebarmenu.js" defer></script>
-<script src="/../authentication.js" defer></script>
+<script src="../sidebarmenu.js" defer></script>
+<script src="../authentication.js" defer></script>
 </body>
 
 </html>
